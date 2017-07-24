@@ -1,7 +1,7 @@
 {
-  "name": "instascan",
-  "version": "1.0.1",
-  "description": "Webcam-driven QR code scanner.",
+  "name": "instascan-ngfar",
+  "version": "1.0.5",
+  "description": "Webcam-driven QR code scanner. For webpack",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

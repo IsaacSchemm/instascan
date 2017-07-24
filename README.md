@@ -1,3 +1,5 @@
+This is a fork of the *instascan* module, with changes so we can easily import it in a webpack bundle.
+
 # ![Instascan](https://raw.githubusercontent.com/schmich/instascan/master/assets/qr.png) Instascan
 Real-time webcam-driven HTML5 QR code scanner. [Try the live demo](https://schmich.github.io/instascan/).
 
