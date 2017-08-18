@@ -3,6 +3,8 @@ This is a fork of the *instascan* module, with changes so we can easily import i
 # ![Instascan](https://raw.githubusercontent.com/schmich/instascan/master/assets/qr.png) Instascan
 Real-time webcam-driven HTML5 QR code scanner. [Try the live demo](https://schmich.github.io/instascan/).
 
+[![npm](https://img.shields.io/npm/v/instascan-ngfar.svg)](https://www.npmjs.com/package/instascan-ngfar)
+
 ## Installing
 
 *Note:* Chrome requires HTTPS when using the WebRTC API. Any pages using this library should be served over HTTPS.
