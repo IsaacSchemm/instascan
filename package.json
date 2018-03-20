@@ -1,15 +1,16 @@
 {
-  "name": "instascan-ngfar",
+  "name": "instascan-ischemm",
   "version": "2.0.6",
-  "description": "Webcam-driven QR code scanner. For webpack",
+  "description": "Webcam-driven QR code scanner. Merges a couple different code branches.",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel --plugins transform-runtime --no-babelrc src --out-dir lib --presets=env"
+    "build": "babel --plugins transform-runtime --no-babelrc src --out-dir lib --presets=env",
+    "dist": "npm run-script build && browserify export.js lib/camera.js lib/scanner.js lib/index.js -o dist/instascan.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/schmich/instascan.git"
+    "url": "git+https://github.com/IsaacSchemm/instascan.git"
   },
   "keywords": [
     "qr",
@@ -21,14 +22,15 @@
     "webcam",
     "realtime"
   ],
-  "author": "Chris Schmich <schmch@gmail.com>",
+  "author": "Isaac Schemm <isaacschemm@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/schmich/instascan/issues"
+    "url": "https://github.com/IsaacSchemm/instascan/issues"
   },
-  "homepage": "https://github.com/schmich/instascan",
+  "homepage": "https://github.com/IsaacSchemm/instascan",
   "devDependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
+    "browserify": "^16.1.1",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4",
