@@ -1,21 +1,12 @@
-This is a fork of the *instascan* module, with changes so we can easily import it in a webpack bundle.
+This fork of the instascan project includes the following changes:
+* webpack compatibility, from https://github.com/pakokrew/instascan (instascan-ngfar)
+* always force rear camera on smartphones/tablets, from https://github.com/volldigital/instascan
+* video tag set to autoplay + muted + playsinline (iOS compatibility)
+* browserify support (if you don't want to use webpack): "npm run-script dist"
+* getCameras() no longer asks for webcam permission on Firefox
 
 # ![Instascan](https://raw.githubusercontent.com/schmich/instascan/master/assets/qr.png) Instascan
-Real-time webcam-driven HTML5 QR code scanner. [Try the live demo](https://schmich.github.io/instascan/).
-
-[![npm](https://img.shields.io/npm/v/instascan-ngfar.svg)](https://www.npmjs.com/package/instascan-ngfar)
-
-## Installing
-
-*Note:* Chrome requires HTTPS when using the WebRTC API. Any pages using this library should be served over HTTPS.
-
-### NPM
-
-`npm install --save instascan-ngfar`
-
-```javascript
-const Instascan = require('instascan-ngfar');
-```
+Real-time webcam-driven HTML5 QR code scanner.
 
 ## API
 
@@ -121,9 +112,11 @@ let opts = {
 
 ## Compatibility
 
-Instascan works on non-iOS platforms in [any browser that supports the WebRTC/getUserMedia API](http://caniuse.com/#feat=stream), which currently includes Chome, Firefox, Opera, and Edge. IE and Safari are not supported.
+Instascan works on non-iOS platforms in [any browser that supports the WebRTC/getUserMedia API](http://caniuse.com/#feat=stream), which currently includes Chome, Firefox, Opera, Safari, and Edge. IE is not supported.
 
-Instascan does not work on iOS since Apple does not yet support WebRTC in WebKit *and* forces other browser vendors (Chrome, Firefox, Opera) to use their implementation of WebKit. [Apple is actively working on WebRTC support in WebKit](https://bugs.webkit.org/show_bug.cgi?id=124288).
+On devices with both front- and rear-facing cameras, the rear-facing camera will be used.
+
+On Firefox, Instascan.Camera.getCameras() will not ask for webcam access permission, so device names might not be available.
 
 ## Performance
 
