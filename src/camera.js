@@ -54,7 +54,9 @@ class Camera {
   static async getCameras(options) {
     let defaults = { video: { facingMode: 'environment' } };
     let constraints = Object.assign({}, defaults, options);
-    await this._ensureAccess(constraints);
+    if (!/Gecko\//.test(navigator.userAgent)) {
+      await this._ensureAccess(constraints);
+    }
 
     let devices = await navigator.mediaDevices.enumerateDevices();
     return devices
