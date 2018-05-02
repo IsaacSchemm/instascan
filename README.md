@@ -1,6 +1,6 @@
 This fork of the instascan project includes the following changes:
 * webpack compatibility, from https://github.com/pakokrew/instascan (instascan-ngfar)
-* always force rear camera on smartphones/tablets, from https://github.com/volldigital/instascan
+* try to force rear camera on smartphones/tablets, without breaking compatibility with PCs
 * video tag set to autoplay + muted + playsinline (iOS compatibility)
 * browserify support (if you don't want to use webpack): "npm run-script dist"
 * getCameras() no longer asks for webcam permission on Firefox
